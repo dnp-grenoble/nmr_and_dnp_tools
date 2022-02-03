@@ -17,3 +17,10 @@ This script helps you to calculate at what time you should get the maximum sensi
 if you have two components in your build up of magnetisation.
 It asks for the build up time in seconds, and the component contributions as shown in topspin
 You can also input the component contributions such that the sum is 1.
+
+
+## xyztodipole.py
+
+This script takes an amino acid or an xyz file and creates a list of dipolar couplings
+between the spins with euler angles between the tensors.
+The euler angles are not important as most of the time we do powder averaging.
