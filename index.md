@@ -4,13 +4,13 @@
 
 ### t1analysis.py
 
-The script takes a T<sup>1</sup> analysis file from topspin replaxation measurements and then fits it with the one component, two components, or stretched exponential as requested by the user. It can give you statistics like [Bayesian Information Criterion](https://en.wikipedia.org/wiki/Bayesian_information_criterion) for checking the best fit.
+The script takes a T<sub>1</sub analysis file from topspin replaxation measurements and then fits it with the one component, two components, or stretched exponential as requested by the user. It can give you statistics like [Bayesian Information Criterion](https://en.wikipedia.org/wiki/Bayesian_information_criterion) for checking the best fit.
 It also calculates the optimum d1 for the best sensitivity by carrying out differential and finding minima.
 
 
 ### temp\_calc\_KBr.py
 
-This script is to calculate the temperature of the sample when the t1 for 79Br is provided from KBr measurements.\frac{1}{T_1} = 0.0145 + 5330T^{-2 }+1.42*10^7T^{-4}+ 2.48*10^9T^{-6}. Ref. [Thurber and Tycko paper](https://doi.org/10.1016/j.jmr.2008.09.019). 
+This script is to calculate the temperature of the sample when the t1 for 79Br is provided from KBr measurements.1/T<sub>1</sub>=0.0145 + 5330T<sup>-2<sup>+1.42*10^7T<sup>-4<sup>+ 2.48*10^9T<sup>-6<sup>. Ref. [Thurber and Tycko paper](https://doi.org/10.1016/j.jmr.2008.09.019). 
 
 ### xyztodipole.py
 
