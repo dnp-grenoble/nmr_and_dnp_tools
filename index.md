@@ -1,36 +1,30 @@
 ## Welcome to the GitHub Page of DNP NMR in Grenoble
 
-You can use the [editor on GitHub](https://github.com/dnp-grenoble/nmr_and_dnp_tools/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# NMR and DNP Tools
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### dipolar\_strength\_calc.py
 
-### Markdown
+This script takes inputs in the form atomic num and nucleus name like 1H, 13C, etc. It asks the user for the distance between the two nuclei in Angstrom and outputs the dipolar strength in Hz and kHz. Note that the sign is positive for convenience sake.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### larmor\_freq\_calc.py
 
-```markdown
-Syntax highlighted code block
+This scripts returns you the Larmor frequency in MHz, given a certain magnetic field as input.
 
-# Header 1
-## Header 2
-### Header 3
+### opt\_tb\_twocomponents.py
 
-- Bulleted
-- List
+This script helps you to calculate at what time you should get the maximum sensitivity if you have two components in your build up of magnetisation. It asks for the build up time in seconds, and the component contributions as shown in topspin You can also input the component contributions such that the sum is 1.
 
-1. Numbered
-2. List
+### xyztodipole.py
 
-**Bold** and _Italic_ and `Code` text
+This script takes an amino acid or an xyz file and creates a list of dipolar couplings between the spins with euler angles between the tensors. The euler angles are not important as most of the time we do powder averaging.
 
-[Link](url) and ![Image](src)
-```
+### temp\_calc\_KBr.py
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+This script is to calculate the temperature of the sample when the t1 for 79Br is provided from KBr measurements.$$\frac{1}{T_1} = 0.0145 + 5330T^{-2 }+1.42*10^7T^{-4}+2.48*10^9T^{-6}$$
 
-### Jekyll Themes
+### t1analysis.py
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dnp-grenoble/nmr_and_dnp_tools/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+The script takes a $$T_1$$analysis file from topspin replaxation measurements and then fits it with the one component, two components, or stretched exponential. It also calculates the optimum d1 for the best sensitivity. $$(S/N)/\sqrt{T_b}$$
 
 ### Support or Contact
 
