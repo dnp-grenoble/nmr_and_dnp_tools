@@ -1,5 +1,5 @@
 ---
-description: Some small NMR scripts that is useful to develop further programmes.
+description: Some small NMR scripts which can be used for analysis or to develop other codes.
 ---
 
 # NMR and DNP Tools
