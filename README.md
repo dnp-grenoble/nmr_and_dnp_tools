@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 description: Some small NMR scripts which can be used for analysis or to develop other codes.
+=======
+description: Simple NMR scipts which can be used for analysis or to develop other codes.
+>>>>>>> ad1d3c952bec2dcbfdf35f1436b2ddbfe3657224
 ---
 
 # NMR and DNP Tools
