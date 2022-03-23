@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to the GitHub Page of DNP NMR in Grenoble
 
 You can use the [editor on GitHub](https://github.com/dnp-grenoble/nmr_and_dnp_tools/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
