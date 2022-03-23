@@ -23,3 +23,7 @@ This script takes an amino acid or an xyz file and creates a list of dipolar cou
 ### temp\_calc\_KBr.py
 
 This script is to calculate the temperature of the sample when the t1 for 79Br is provided from KBr measurements.$$\frac{1}{T_1} = 0.0145 + 5330T^{-2 }+1.42*10^7T^{-4}+2.48*10^9T^{-6}$$
+
+### t1analysis.py
+
+The script takes a $$T_1$$analysis file from topspin replaxation measurements and then fits it with the one component, two components, or stretched exponential. It also calculates the optimum d1 for the best sensitivity. $$(S/N)/\sqrt{T_b}$$
