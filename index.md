@@ -1,4 +1,4 @@
-## Welcome to the GitHub Page of DNP NMR in Grenoble
+## GitHub Page of DNP NMR in Grenoble
 
 # NMR and DNP Tools
 
