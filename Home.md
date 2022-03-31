@@ -9,5 +9,9 @@ The build up can be modelled with a monoexponential in the form:
 
 ![f1]
 
-
 [f1]: https://chart.apis.google.com/chart?cht=tx&chl=I(t)=I_0(1-\exp(-t/T_1))
+
+or a biexponential in the form
+
+![f2]
+[f2]: https://chart.apis.google.com/chart?cht=tx&chl=I(t)=I_{0,a}(1-\exp(-t/T_{1,a})+I_{0,b}(1-\exp(-t/T_{1,b}))
