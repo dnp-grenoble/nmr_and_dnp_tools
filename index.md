@@ -1,4 +1,4 @@
-# [NMR and DNP Tools](https://https://dnp-grenoble.github.io/)
+# [NMR and DNP Tools](https://dnp-grenoble.github.io/)
 
 # Small scripts for analysis and building bigger codes.
 
