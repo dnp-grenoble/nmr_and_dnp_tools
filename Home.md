@@ -10,4 +10,4 @@ The build up can be modelled with a monoexponential in the form:
 ![f1]
 
 
-[f1]: https://chart.apis.google.com/chart?cht=tx&chl=I(t) = I_0 (1 - \exp(-t/T_1))
+[f1]: https://chart.apis.google.com/chart?cht=tx&chl=I(t)=I_0(1-\exp(-t/T_1))
