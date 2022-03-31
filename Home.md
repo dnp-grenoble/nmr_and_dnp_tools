@@ -15,4 +15,4 @@ or a biexponential in the form
 
 ![f2]
 
-[f2]: https://chart.apis.google.com/chart?cht=tx&chl=I(t)=I_{0,a}(1-\exp(-t/T_{1,a}) + I_{0,b}(1-\exp(-t/T_{1,b}))
+[f2]: https://chart.apis.google.com/chart?cht=tx&chl=I(t)=I_{0,a}(1-\exp(-t/T_{1,a})+I_{0,b}(1-\exp(-t/T_{1,b}))
