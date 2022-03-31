@@ -1,6 +1,6 @@
-## [GitHub Page of DNP NMR in Grenoble](https://github.com/dnp-grenoble)
+# [NMR and DNP Tools](https://https://dnp-grenoble.github.io/)
 
-# NMR and DNP Tools
+# Small scripts for analysis and building bigger codes.
 
 ### t1analysis.py
 
