@@ -7,4 +7,4 @@ Description of the Scripts.
 The main aim of the script is to analyse the build up of polarisation in the saturation recovery experiment.
 The build up can be modelled with a monoexponential in the form:
 
-$I(t) = I_0 (1 - \exp(-t/T_1))$
+$$ I(t) = I_0 (1 - \exp(-t/T_1)) $$
