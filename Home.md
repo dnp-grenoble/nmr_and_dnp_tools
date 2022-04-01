@@ -14,3 +14,4 @@ Bi-exponential in the form
 ![Figure](https://latex.codecogs.com/svg.image?I(t)&space;=&space;I_{0,a}&space;(1-\exp(-t/T_{1,a}))&space;&plus;&space;I_{0,b}&space;(1-\exp(-t/T_{1,b}))&space;&space;)
 
 If there is no spin-diffusion the buildup can also be a stretched exponential as described in the paper:
+D. Tse, S.R. Hartmann, Nuclear Spin-Lattice Relaxation via Paramagnetic Centers, Phys. Rev. 166 (1968) 279–291. [Link](https://doi.org/10.1103/PhysRev.166.279.)
