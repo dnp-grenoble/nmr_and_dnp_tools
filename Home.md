@@ -31,8 +31,5 @@ To calculate the maximum sensitivity it calculates the differential:
 ![Figure](https://latex.codecogs.com/svg.image?\frac{dI(t)}{dt}) 
 and finds the minimum (zero) in the absolute scale
 
-
-
-
 The python file for the analysis is:
 https://github.com/dnp-grenoble/nmr_and_dnp_tools/blob/3f4e44ff697b1f476bdad88bdd76a4ca2d7627d9/t1analysis.py
