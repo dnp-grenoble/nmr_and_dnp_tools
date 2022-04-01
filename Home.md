@@ -11,6 +11,4 @@ The build up can be modelled with a monoexponential in the form:
 
 or a biexponential in the form
 
-![f2]
-
-[f2]: https://chart.apis.google.com/chart?cht=tx&chl=I(t)=I_{0,a}(1-\exp(-t/T_{1,a}))+I_{0,b}(1-\exp(-t/T_{1,b}))
+![Figure](https://latex.codecogs.com/svg.image?I(t)&space;=&space;I_{0,a}&space;(1-\exp(-t/T_{1,a}))&space;&plus;&space;I_{0,b}&space;(1-\exp(-t/T_{1,b}))&space;&space;)
