@@ -62,7 +62,7 @@ def optimumrecycledelaystrexp(x, tau1, beta):
 
 colspecs=[(0, 10),(10, 21), (22, 35), (36, 48), (48, 61)]
 
-df=pd.read_fwf('D:/OneDrive/Academics/Data/2021-12-CP-1H-13C-PAVLOT-Indomethacin/2/pdata/1/ct1t2.txt', skiprows=21, skipfooter=3, colspecs=colspecs, names=['Point','Tau','Expt','Calc','Difference'])
+df=pd.read_fwf('D:/OneDrive/Academics/Data/2022-01-CP-1H-13C-PAVLOT-Indomethacin/1/pdata/1/ct1t2.txt', skiprows=21, skipfooter=3, colspecs=colspecs, names=['Point','Tau','Expt','Calc','Difference'])
 
 p=0
 
@@ -79,18 +79,12 @@ for i in time:
     p+=1
 
 
-plt.plot(time_array,int_expt)
-plt.plot(time_array, int_calc)
+plt.plot(time_array,int_expt, label='Norm. Expt. Data')
+#plt.plot(time_array,int_calc, label='Norm. Topspin Calc. Data')
 
-ydata=int_calc.to_numpy()
+ydata=int_expt.to_numpy()
 xdata=time_array
 
-# For scipy fitting
-#popt, pcov = curve_fit(twoexpbuild, xdata.flatten(), ydata.flatten(), bounds=([0.01,0.1,1],[1,256,256]))
-# print('a =', popt[0])
-# print('b =', 1-popt[0])
-# print('T1a =', popt[1])
-# print('T1b =', popt[2])
 
 choice=int(input("1 for monoexp, 2 for biexp, 3 for stretched: "))
 
@@ -119,7 +113,7 @@ elif choice == 2:
 
     optimumd1=optimumrecycledelaytwoexp(xdata.flatten(), a, t1a, t1b)
     plt.plot(time_array,result.best_fit,'--')
-    print('Component 1 ' + str(round(a,2)) +'\n'+'Component 2 ' + str(round(b))+ '\n'+ 'T1 of 1 '+str(round(t1a,2))+ '\n'+ 'T1 of 2 '+str(round(t1b,2)))    
+    print('Component 1 ' + str(round(a,2)) +'\n'+'Component 2 ' + str(round(b,2))+ '\n'+ 'T1 of 1 '+str(round(t1a,2))+ '\n'+ 'T1 of 2 '+str(round(t1b,2)))    
     print('The optimum recycle delay should be: '+ str(round(optimumd1,2))+'s')
 elif choice == 3:
     exp_build=Model(stretchedexp)
