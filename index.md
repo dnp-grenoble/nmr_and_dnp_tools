@@ -2,31 +2,8 @@
 
 # Small scripts for analysis and building bigger codes.
 
-### t1analysis.py
-
-The script takes a T<sub>1</sub> analysis file from topspin replaxation measurements and then fits it with the one component, two components, or stretched exponential as requested by the user. It can give you statistics like [Bayesian Information Criterion](https://en.wikipedia.org/wiki/Bayesian_information_criterion) for checking the best fit.
-It also calculates the optimum d1 for the best sensitivity by carrying out differential and finding minima.
-
-
-### temp\_calc\_KBr.py
-
-This script is to calculate the temperature of the sample when the t1 for 79Br is provided from KBr measurements.1/T<sub>1</sub>=0.0145 + 5330T<sup>-2</sup>+1.42e7T<sup>-4</sup>+ 2.48e9T<sup>-6</sup>. Ref. [Thurber and Tycko paper](https://doi.org/10.1016/j.jmr.2008.09.019). 
-
-### xyztodipole.py
-
-This script takes an amino acid or an xyz file and creates a list of dipolar couplings between the spins with euler angles between the tensors. The euler angles are not important as most of the time we do powder averaging.
-
-### dipolar\_strength\_calc.py
-
-This script takes inputs in the form atomic num and nucleus name like 1H, 13C, etc. It asks the user for the distance between the two nuclei in Angstrom and outputs the dipolar strength in Hz and kHz. Note that the sign is positive for convenience sake.
-
-### larmor\_freq\_calc.py
-
-This scripts returns you the Larmor frequency in MHz, given a certain magnetic field as input.
-
-### opt\_tb\_twocomponents.py
-
-This script helps you to calculate at what time you should get the maximum sensitivity if you have two components in your build up of magnetisation. It asks for the build up time in seconds, and the component contributions as shown in topspin You can also input the component contributions such that the sum is 1.
+The wiki in the Github has the details of the scripts.
+Please give feedback in case there is some issue.
 
 ### Support or Contact
 
