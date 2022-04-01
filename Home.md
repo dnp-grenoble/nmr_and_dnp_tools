@@ -7,7 +7,7 @@ Description of the Scripts.
 The main aim of the script is to analyse the build up of polarisation in the saturation recovery experiment.
 The build up can be modelled with a monoexponential in the form:
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+![Figure](https://latex.codecogs.com/svg.image?I(t)&space;=&space;I_0&space;(1-\exp(-t/T_1))&space;)
 
 or a biexponential in the form
 
