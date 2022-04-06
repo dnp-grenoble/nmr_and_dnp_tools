@@ -13,6 +13,7 @@ t, b, a, Ta, Tb = symbols ('t b a Ta Tb')
 b = 1-a
 
 s=a*(1-exp(-t/Ta))/sqrt(t)+b*(1-exp(-t/Tb))/sqrt(t)
+bup=s*sqrt(t)
 k=diff(s,t)
 
 #pprint(s)
@@ -28,19 +29,25 @@ comp=comp1/(comp1+comp2)
 
 y=k.subs({Ta:t1,Tb:t2,a:comp})
 y2=s.subs({Ta:t1,Tb:t2,a:comp})
+y3=bup.subs({Ta:t1,Tb:t2,a:comp})
 
 lam_x = lambdify(t, y, modules=['numpy'])
 lam_x2 = lambdify(t, y2, modules=['numpy'])
+lam_x3 = lambdify(t, y3, modules=['numpy'])
+
 x_vals = np.linspace(1, 40, 100000)
 y_vals = lam_x(x_vals)
 y2_vals = lam_x2(x_vals)
+y3_vals = lam_x3(x_vals)
 
-plt.plot(x_vals,abs(y_vals))
-plt.plot(x_vals,abs(y2_vals))
+plt.plot(x_vals,abs(y_vals), label=r"$\frac{d \left( \frac{I}{\sqrt{t}} \right) }{dt}$")
+plt.plot(x_vals,abs(y2_vals), label=r"$\frac{I}{\sqrt{t}}$")
+plt.plot(x_vals,y3_vals, label="Intensity(I)")
+plt.legend()
 
 min_x_val=x_vals[np.argmin(abs(y_vals))]
 
-plt.plot((min_x_val,min_x_val),(0,np.max(y2_vals)),'k-.')
+plt.plot((min_x_val,min_x_val),(0,np.max(y3_vals)),'k-.')
 plt.xlabel('Time(s)')
 plt.ylabel('Intensity (arb. u.)')
 
