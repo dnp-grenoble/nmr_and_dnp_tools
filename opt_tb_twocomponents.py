@@ -4,10 +4,10 @@ Created on Tue Jan 25 18:52:52 2022
 
 @author: Paul
 """
-from sympy import symbols, diff, exp, sqrt, lambdify, init_session
+from sympy import symbols, diff, exp, sqrt, lambdify
 import matplotlib.pyplot as plt
 import numpy as np
-init_session()
+#init_session()
 
 t, b, a, Ta, Tb = symbols ('t b a Ta Tb')
 b = 1-a
@@ -44,6 +44,7 @@ plt.plot(x_vals,abs(y_vals), label=r"$\frac{d \left( \frac{I}{\sqrt{t}} \right) 
 plt.plot(x_vals,abs(y2_vals), label=r"$\frac{I}{\sqrt{t}}$")
 plt.plot(x_vals,y3_vals, label="Intensity(I)")
 plt.legend()
+plt.show()
 
 min_x_val=x_vals[np.argmin(abs(y_vals))]
 
