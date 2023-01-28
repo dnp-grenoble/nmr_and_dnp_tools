@@ -36,7 +36,7 @@ lam_x = lambdify(t, y, modules=['numpy'])
 lam_x2 = lambdify(t, y2, modules=['numpy'])
 lam_x3 = lambdify(t, y3, modules=['numpy'])
 
-x_vals = np.linspace(1, 40, 100000)
+x_vals = np.linspace(1, 256, 100000)
 y_vals = lam_x(x_vals)
 y2_vals = lam_x2(x_vals)
 y3_vals = lam_x3(x_vals)

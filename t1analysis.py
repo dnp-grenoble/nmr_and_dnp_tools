@@ -62,7 +62,7 @@ def optimumrecycledelaystrexp(x, tau1, beta):
 
 colspecs=[(0, 10),(10, 21), (22, 35), (36, 48), (48, 61)]
 
-df=pd.read_fwf('D:/OneDrive/Academics/Data/2022-01-CP-1H-13C-PAVLOT-Indomethacin/1/pdata/1/ct1t2.txt', skiprows=21, skipfooter=3, colspecs=colspecs, names=['Point','Tau','Expt','Calc','Difference'])
+df=pd.read_fwf('D:/OneDrive/Academics/Data/2022-08-Obelix-PAVLOT_KBr_LT/4/pdata/1/ct1t2.txt', skiprows=21, skipfooter=3, colspecs=colspecs, names=['Points','Tau','Expt','Calc','Difference'])
 
 p=0
 
@@ -79,9 +79,10 @@ for i in time:
     p+=1
 
 
-plt.plot(time_array,int_expt, label='Norm. Expt. Data')
+plt.plot(time_array,int_expt,'ko', label='Norm. Expt. Data')
 #plt.plot(time_array,int_calc, label='Norm. Topspin Calc. Data')
-
+plt.xlabel('Time(s)')
+plt.ylabel('Normalised Intensity')
 ydata=int_expt.to_numpy()
 xdata=time_array
 
@@ -92,10 +93,10 @@ if choice == 1:
     exp_build=Model(monoexpbuild)
     exp_build.set_param_hint('tau', value=20, min=0.001, max=256.0)
     result=exp_build.fit(ydata.flatten(),x=xdata.flatten(),method='nelder')
-    plt.plot(time_array,result.best_fit,'--')
+#    plt.plot(time_array,result.best_fit,'--')
     t1=result.best_values.get("tau")
     optimumd1=optimumrecycledelayoneexp(xdata.flatten(), t1)
-    plt.plot(time_array,result.best_fit,'--')
+    plt.plot(time_array,result.best_fit,'r-')
     print('T1 is '+ str(round(t1,2))+ 's')
     print('The optimum recycle delay should be: '+ str(round(optimumd1,2))+'s')
     
@@ -115,6 +116,7 @@ elif choice == 2:
     plt.plot(time_array,result.best_fit,'--')
     print('Component 1 ' + str(round(a,2)) +'\n'+'Component 2 ' + str(round(b,2))+ '\n'+ 'T1 of 1 '+str(round(t1a,2))+ '\n'+ 'T1 of 2 '+str(round(t1b,2)))    
     print('The optimum recycle delay should be: '+ str(round(optimumd1,2))+'s')
+    plt.show()
 elif choice == 3:
     exp_build=Model(stretchedexp)
     #exp_build.set_param_hint('a1', value=1, min=0.01, max=1)
@@ -133,4 +135,5 @@ else:
     print('Invalid method')
 
 
+plt.text(10,20,t1)
 
