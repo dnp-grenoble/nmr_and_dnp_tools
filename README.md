@@ -3,8 +3,8 @@
 ### Description: Some small NMR scripts which can be used for analysis or to develop other codes.
 
 Welcome to the nmr_and_dnp_tools wiki!
-All the scripts can be found in the repository:
-https://github.com/dnp-grenoble/nmr_and_dnp_tools.git
+All the scripts can be found in \
+[https://github.com/dnp-grenoble/nmr_and_dnp_tools.git](https://github.com/dnp-grenoble/nmr_and_dnp_tools.git)
 
 Description of the Scripts.
 
