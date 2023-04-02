@@ -3,10 +3,13 @@
 ### Description: Some small NMR scripts which can be used for analysis or to develop other codes.
 
 Welcome to the nmr_and_dnp_tools wiki!
+All the scripts can be found in the repository:
+https://github.com/dnp-grenoble/nmr_and_dnp_tools.git
 
 Description of the Scripts.
 
 ## T1 Analysis
+> ### Script Name: t1analysis.ipynb & opt_tb_twocomponents.py
 
 The main aim of the script is to analyse the build up of polarisation in the saturation recovery experiment.
 The build up can be modelled with a monoexponential in the form:
@@ -35,13 +38,9 @@ To calculate the maximum sensitivity it calculates the differential:
 ![Figure](https://latex.codecogs.com/svg.image?\frac{dI(t)}{dt}) 
 and finds the minimum (zero) in the absolute scale
 
-The python file for the analysis is:
-https://github.com/dnp-grenoble/nmr_and_dnp_tools/blob/3f4e44ff697b1f476bdad88bdd76a4ca2d7627d9/t1analysis.ipynb
-
-If you have two components and the respective relaxation times and just want to calculate the optimum buildup time, then the file for analysis is:
-https://github.com/dnp-grenoble/nmr_and_dnp_tools/blob/20d72131f5a76148ab1a86977a6150bbbffdf406/opt_tb_twocomponents.py
 
 ## Dipole Calculator
+> ### Script Name: dipolar_strength_calc.py
 
 The script asks the user to input two nuclei.
 The input should be in the form: 1H, 13C, etc.
@@ -50,8 +49,6 @@ It takes distance between the two nuclei in Angstrom, and calculates the dipolar
 
 ![Figure](https://latex.codecogs.com/svg.image?|\frac{\mu_0}{4\pi}\frac{\gamma_1\gamma_2h}{r^3}|)
 
-The file for the calculation is:
-https://github.com/dnp-grenoble/nmr_and_dnp_tools/blob/20d72131f5a76148ab1a86977a6150bbbffdf406/dipolar_strength_calc.py
 
 ## Biradical weight calculator
 
@@ -69,6 +66,3 @@ It calculates the weight in mg based on the molecular weight (say z g/mol):
 Weight of biradical needed in mg = ![Figure](https://latex.codecogs.com/svg.image?\frac{xyz}{1e6})
 
 If you have suggestions for adding other biradicals, please let me know.
-
-The file for the calculation is:
-https://tinyurl.com/yeyv2mda
