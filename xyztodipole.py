@@ -34,7 +34,7 @@ cur_dir = os.getcwd()
 xyz_dir = os.chdir('amino_acids_xyz')
 
 
-gly = cc.Cartesian.read_xyz('Glycine.xyz', start_index=1)
+gly = cc.Cartesian.read_xyz('L-Alanine.xyz', start_index=1)
 coord_gly = gly[['x','y','z']].to_numpy()
 
 gyr_gly_atom=np.array([])
@@ -69,7 +69,7 @@ np.set_printoptions(precision=3)
 for i in range(0, np.shape(coord_gly)[0]):
     for j in range(i+1, np.shape(coord_gly)[0]):
         eulo=np.round(anglebetweenvec(coord_gly[i], coord_gly[j]),2)
-        print(i+1,j+1,np.round(dip[i][j],2),*eulo)
+        print(i+1,j+1,np.round(dip[i][j],2),*eulo,atom_name_list[i],atom_name_list[j])
 
         
 
